@@ -1,0 +1,84 @@
+@use "../../../../styles/mixin";
+
+h1.title1 {
+  font-weight: var(--font-weight-bold);
+  font-size: 70px;
+}
+
+p {
+  color: var(--medium-gray);
+  line-height: 1.8;
+}
+
+/*Mobile*/
+@media screen and (max-width: 1023px) {
+  .section {
+    @include mixin.d-flex-center-between;
+    flex-direction: column-reverse;
+  }
+
+  h1.title1 {
+    font-size: 35px;
+  }
+
+  h1.title1,
+  p {
+    text-align: center;
+  }
+
+  button {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-image {
+    margin-bottom: 50px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .section-clients {
+    max-width: 100%;
+    @include mixin.d-flex-center-between;
+    flex-wrap: wrap;
+    margin: 0.8rem;
+    bottom: 0;
+    img {
+      width: 20%;
+      height: 20%;
+    }
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px) {
+  .section {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .section-rigth {
+      margin: 4rem 15rem 0rem 0rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .section-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .section-clients {
+      width: 100%;
+      @include mixin.d-flex-center-between;
+      flex-wrap: wrap;
+    }
+  }
+}

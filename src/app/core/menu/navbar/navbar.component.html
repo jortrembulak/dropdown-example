@@ -1,0 +1,75 @@
+<header id="navbar-header">
+  <nav class="navbar">
+    <div class="navbar-item">
+      <a href="/"><img src="../../../assets/images/logo.svg" alt="Logo" /></a>
+
+      <button
+        class="btn pt-3 mobile-only"
+        (click)="showMenu()"
+        aria-label="open menu"
+        [attr.aria-hidden]="isMobile ? false : true"
+      >
+        <img src="../../../assets/images/icon-menu.svg" alt="" />
+      </button>
+
+      <ul class="desktop-only">
+        <li class="dropdown mr-4">
+          <a href="#">Novidades</a>
+          <div class="dropdown-item">
+            <div class="dropdown-item-inner">
+              <a href="#">
+                <img
+                  src="../../../assets/images/icon-todo.svg"
+                  alt="Para fazer"
+                />
+                Para fazer
+              </a>
+              <a href="#">
+                <img
+                  src="../../../assets/images/icon-calendar.svg"
+                  alt="Calendário"
+                />
+                Calendário
+              </a>
+              <a href="#">
+                <img
+                  src="../../../assets/images/icon-reminders.svg"
+                  alt="Lembretes"
+                />
+                Lembretes
+              </a>
+              <a href="#">
+                <img
+                  src="../../../assets/images/icon-planning.svg"
+                  alt="Planejamento"
+                />
+                Planejamento
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown mr-4">
+          <a href="#">Companhia</a>
+          <div class="dropdown-item">
+            <div class="dropdown-item-inner">
+              <a href="#">História</a>
+              <a href="#">Nosso Time</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
+        </li>
+        <li class="mr-4">
+          <a href="#">Carreira</a>
+        </li>
+        <li class="mr-4">
+          <a href="">Sobre</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-item desktop-only">
+      <button class="btn btn-primary mr-2">Login</button>
+      <button class="btn btn-border">Registrar</button>
+    </div>
+  </nav>
+</header>

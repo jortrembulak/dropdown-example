@@ -1,0 +1,74 @@
+<nav
+  aria-labelledby="main-menu-label"
+  [ngClass]="(showSideNav | async) ? 'show-menu' : 'hide-menu'"
+>
+  <div class="sidebar">
+    <button
+      class="btn mobile-only"
+      (click)="onClose()"
+      aria-label="close menu"
+      [attr.aria-hidden]="isMobile ? false : true"
+    >
+      <img src="../../../../assets/images/icon-close-menu.svg" alt="" />
+    </button>
+  </div>
+
+  <ul role="menubar" class="">
+    <li role="menuitem" class="dropdown">
+      <a href="#" class="dropdown-title">Novidades</a>
+      <div class="dropdown-item">
+        <div class="dropdown-item-inner">
+          <a href="#">
+            <img
+              src="../../../assets/images/icon-todo.svg"
+              alt="Para fazer"
+              class="mr-2"
+            />
+            Para fazer
+          </a>
+          <a href="#">
+            <img
+              src="../../../assets/images/icon-calendar.svg"
+              alt="Calendário"
+              class="mr-2"
+            />
+            Calendário
+          </a>
+          <a href="#">
+            <img
+              src="../../../assets/images/icon-reminders.svg"
+              alt="Lembretes"
+              class="mr-2"
+            />
+            Lembretes
+          </a>
+          <a href="#">
+            <img
+              src="../../../assets/images/icon-planning.svg"
+              alt="Planejamento"
+              class="mr-2"
+            />
+            Planejamento
+          </a>
+        </div>
+      </div>
+    </li>
+    <li role="menuitem" class="dropdown mr-4">
+      <a href="#" class="dropdown-title">Companhia</a>
+      <div class="dropdown-item">
+        <div class="dropdown-item-inner">
+          <a href="#"> História </a>
+          <a href="#"> Nosso Time </a>
+          <a href="#"> Blog </a>
+        </div>
+      </div>
+    </li>
+    <li role="menuitem"><a href="#">Carreira</a></li>
+    <li role="menuitem"><a href="#">Sobre</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <button class="btn btn-primary mb-3">Login</button>
+    <button class="btn btn-border">Registrar</button>
+  </div>
+</nav>

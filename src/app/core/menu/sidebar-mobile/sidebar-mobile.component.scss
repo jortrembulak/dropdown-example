@@ -1,0 +1,84 @@
+@use "../../../../styles/mixin";
+
+nav {
+  background-color: #fff;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 250px;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
+ul {
+  padding: 20px;
+
+  li {
+    padding: 10px;
+  }
+
+  li > a:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgba(124, 125, 126, 0.25);
+    border-radius: 8px;
+  }
+
+  li a {
+    text-decoration: none;
+    padding: 8px;
+    color: var(--medium-gray);
+  }
+
+  li a:hover {
+    color: var(--almost-black);
+  }
+}
+
+.dropdown-item {
+  display: none;
+}
+
+.dropdown .dropdown-item-inner {
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+
+  a:focus {
+    box-shadow: 0 0 0 0.15rem rgba(124, 125, 126, 0.25);
+    border-radius: 8px;
+  }
+}
+
+.dropdown:hover {
+  .dropdown-item {
+    display: block;
+  }
+}
+
+.dropdown-title::after {
+  margin-left: 10px;
+  content: url("../../../../assets/images/icon-arrow-down.svg");
+}
+
+.dropdown-title:hover:after {
+  content: url("../../../../assets/images/icon-arrow-up.svg");
+}
+
+.sidebar {
+  text-align: end;
+
+  button {
+    padding: 20px;
+  }
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 0;
+}

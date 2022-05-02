@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+@import "~styles/reset";
+@import "~styles/variables";
+@import "~styles/margins";
+@import "~styles/paddings";
+@import "~styles/buttons";
+@import "~styles/container";
+
+body {
+  font-family: var(--font-family-base) !important;
+  background-color: var(--almost-white);
+}
+
+.hide-menu {
+  display: none;
+}
+
+.show-menu {
+  display: block;
+}
+
+#body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: calc(100% - 250px);
+  height: 100vh;
+  display: none;
+  opacity: 0.7;
+  overflow: hidden;
+  background: rgba(0, 0, 0);
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .navbar {
+    .navbar-item {
+      width: 100% !important;
+    }
+  }
+}
